@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_alice_blue"
+    tools:context=".modulesscreen.utilitiesandmanagement.appmanagement.AppDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Secura.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="?attr/colorOnPrimary"
+            app:subtitleTextColor="?attr/colorOnPrimary"
+            app:popupTheme="@style/Theme.Secura.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="16dp"
+                android:background="@drawable/rounded_corners_background">
+                <ImageView
+                android:id="@+id/appIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="App Icon"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/appName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App Name"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:textColor="@color/text_primary_dark_blue"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:id="@+id/packageName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="com.example.app"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary_blue_grey"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General Info"
+                style="@style/SectionHeader"/>
+
+            <TextView
+                android:id="@+id/versionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version: 1.0"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:id="@+id/versionCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version Code: 1"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:id="@+id/installTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Installed: Jan 01, 2023 10:00 AM"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:id="@+id/updateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Updated: Jan 01, 2024 10:00 AM"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:id="@+id/isSystemApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="System App: No"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Storage &amp; Data"
+                style="@style/SectionHeader"/>
+
+            <TextView
+                android:id="@+id/codeSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Code Size: 0 MB"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:id="@+id/dataSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Size: 0 MB"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:id="@+id/cacheSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cache Size: 0 MB"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:id="@+id/appSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Size: 0 MB"
+                style="@style/DetailText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary_blue_grey"
+                android:text="*Exact Data/Cache sizes for other apps are restricted due to Android's security model. You may need to visit system app info settings for precise figures and actions."
+                android:layout_marginTop="4dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actions"
+                style="@style/SectionHeader"/>
+
+            <Button
+                android:id="@+id/openAppButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open App"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/blue_dark"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/managePermissionsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage Permissions"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/blue_standard"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/viewUsageStatsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Usage Statistics"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/blue_standard"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/clearCacheButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clear Cache (via system settings)"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/dim_gray"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/clearDataButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clear Data (via system settings)"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/dim_gray"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/forceStopButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Force Stop (via system settings)"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/error_red"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/uninstallButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uninstall App"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/error_red"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme inheriting from MaterialComponents.DayNight.NoActionBar -->
+    <style name="Base.Theme.Secura" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="actionModeStyle">@style/Secura.ActionMode</item>
+        <!-- Primary color palette -->
+        <item name="colorPrimary">@color/blue_standard</item>
+        <item name="colorPrimaryVariant">@color/blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary color palette -->
+        <item name="colorSecondary">@color/blue_accent</item>
+        <item name="colorSecondaryVariant">@color/blue_medium</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background and surface colors -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorSurface">@color/white_alice_blue</item>
+        <item name="colorOnSurface">@color/text_primary_dark_blue</item>
+        <!-- Error color -->
+        <item name="colorError">@color/error_red</item>
+        <item name="colorOnError">@color/white</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary_dark_blue</item>
+        <item name="android:textColorSecondary">@color/text_secondary_blue_grey</item>
+
+        <!-- System bar colors -->
+        <item name="android:statusBarColor">@color/white_smoke</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <!-- Divider color -->
+        <item name="android:divider">@color/blue_grey_light</item>
+
+        <!-- Ripple effect color -->
+        <item name="colorControlHighlight">@color/blue_ultralight</item>
+
+        <!-- Custom button styles -->
+        <item name="materialButtonStyle">@style/Widget.App.Button.Primary</item>
+        <item name="android:buttonStyle">@style/Widget.App.Button.Primary</item>
+
+        <!-- Custom toolbar style -->
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="android:actionBarStyle">@style/Widget.App.Toolbar</item>
+    </style>
+
+    <!-- This style ensures that Theme.Secura inherits from the base theme, as used in AndroidManifest.xml -->
+    <style name="Theme.Secura" parent="Base.Theme.Secura" />
+
+    <!-- Style for primary buttons -->
+    <style name="Widget.App.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/blue_standard</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Style for outlined buttons -->
+    <style name="Widget.App.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/blue_medium</item>
+        <item name="android:textColor">@color/blue_medium</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Overlay theme for AppBar (dark action bar) -->
+    <style name="Theme.Secura.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+
+    <!-- Overlay theme for Popups (light) -->
+    <style name="Theme.Secura.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+    </style>
+
+    <!-- Style for the application toolbar -->
+    <style name="Widget.App.Toolbar" parent="Widget.MaterialComponents.Toolbar.PrimarySurface">
+        <item name="titleTextColor">@color/text_primary_dark_blue</item>
+        <item name="subtitleTextColor">@color/text_secondary_blue_grey</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- NEW: Custom style for AlertDialogs to ensure Material Design compatibility -->
+    <style name="AppTheme.AlertDialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <!-- Customize dialog attributes here if needed -->
+        <item name="android:textColorPrimary">@color/text_primary_dark_blue</item>
+        <item name="android:textColorSecondary">@color/text_secondary_blue_grey</item>
+        <item name="colorAccent">@color/blue_standard</item>
+        <item name="colorPrimary">@color/blue_standard</item>
+        <!-- Define styles for positive and negative buttons within the dialog -->
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button.DialogPositive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button.DialogNegative</item>
+    </style>
+
+    <!-- Style for positive button in dialogs (e.g., "Delete" button) -->
+    <style name="Widget.App.Button.DialogPositive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/error_red</item>
+    </style>
+
+    <!-- Style for negative button in dialogs (e.g., "Cancel" button) -->
+    <style name="Widget.App.Button.DialogNegative" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/blue_standard</item>
+    </style>
+    <style name="NumpadButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_primary_dark_blue</item>
+        <item name="strokeColor">@color/blue_grey_light</item>
+    </style>
+
+    <style name="NumpadImageButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:tint">@color/text_primary_dark_blue</item>
+        <item name="strokeColor">@color/blue_grey_light</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+
+
+</resources>

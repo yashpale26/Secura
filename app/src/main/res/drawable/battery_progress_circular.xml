@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background ring -->
+    <item android:id="@android:id/background">
+        <shape android:shape="ring"
+            android:innerRadiusRatio="4"
+            android:thicknessRatio="10">
+            <size android:width="220dp" android:height="220dp"/>
+            <solid android:color="@color/blue_grey_light"/>
+        </shape>
+    </item>
+
+    <!-- Progress ring (level-controlled, starts at top (270°)) -->
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="ring"
+                android:useLevel="true"
+                android:innerRadiusRatio="4"
+                android:thicknessRatio="10">
+                <size android:width="220dp" android:height="220dp"/>
+                <gradient
+                    android:type="sweep"
+                    android:useLevel="true"
+                    android:startColor="@color/battery_green"
+                    android:centerColor="@color/battery_yellow"
+                    android:endColor="@color/battery_red"/>
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>

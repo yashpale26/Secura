@@ -1,0 +1,207 @@
+<!-- 3. Updated XML Layout File for the Secure Browser UI
+    File: res/layout/activity_secure_browser.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    tools:context=".modulesscreen.securebrowser.SecureBrowserActivity">
+
+    <!-- AppBarLayout to hold the Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Secura.AppBarOverlay">
+
+        <!-- Toolbar matching your theme -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue_standard"
+            app:popupTheme="@style/Theme.Secura.PopupOverlay"
+            app:titleTextColor="@color/white"
+            app:subtitleTextColor="?attr/colorOnSurface">
+
+<!--            &lt;!&ndash; Back button in the toolbar &ndash;&gt;-->
+<!--            <ImageButton-->
+<!--                android:id="@+id/back_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start|center_vertical"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:contentDescription="Back"-->
+<!--                android:padding="12dp"-->
+<!--                android:src="@drawable/ic_arrow_back"-->
+<!--                app:tint="@color/white" />-->
+
+<!--            &lt;!&ndash; This is where the toolbar title would go &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/toolbar_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Secure Browser"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Browser Interface Section -->
+    <LinearLayout
+        android:id="@+id/browser_interface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLayout"
+        android:background="?attr/colorSurface"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- URL input, Go button, and new Clear button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="9dp"
+            android:layout_gravity="center"
+            android:paddingBottom="8dp">
+
+            <!-- Back button in the URL bar section -->
+            <ImageButton
+                android:id="@+id/back_button_browser"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Go Back"
+                android:padding="0dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="?attr/colorOnSurface" />
+
+            <EditText
+                android:id="@+id/url_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter URL"
+                android:layout_gravity="center"
+                android:inputType="textUri"
+                android:textColor="?attr/colorOnSurface"
+                android:textColorHint="?attr/colorOnSurface"
+                android:background="@drawable/rounded_edittext_background"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+
+            <!-- New Clear button -->
+            <ImageButton
+                android:id="@+id/clear_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:backgroundTint="?attr/colorError"
+                android:src="@drawable/ic_clear_button"
+                android:contentDescription="Clear"
+                app:tint="?attr/colorOnError" />
+
+            <ImageButton
+                android:id="@+id/go_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="?attr/colorSecondary"
+                android:src="@drawable/ic_go_button"
+                android:contentDescription="Go"
+                app:tint="?attr/colorOnSecondary" />
+        </LinearLayout>
+
+        <!-- Progress bar for loading -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressTint="?attr/colorPrimary"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- The WebView itself -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar"
+        android:layout_below="@id/browser_interface" />
+
+    <!-- Bottom Bar for controls -->
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorSurface"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+        <!-- Blocked links counter -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/blocked_links_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Blocked Links: 0"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <!-- Add Block button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_block_button"
+                style="@style/Widget.App.Button.Primary"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Add Blocked Link"
+                app:icon="@drawable/ic_add_link"
+                app:iconTint="@color/white" />
+
+            <!-- View Blocked Links button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/view_blocked_links_button"
+                style="@style/Widget.App.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Blocked Links"
+                app:icon="@drawable/ic_eye"
+                app:iconTint="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

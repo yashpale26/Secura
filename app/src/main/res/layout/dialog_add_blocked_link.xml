@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- New Name field -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Name of the Website"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialog_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g., Evil Website"
+        android:inputType="textCapSentences"
+        android:background="@drawable/rounded_edittext_background"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Enter URL"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialog_url_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g., example.com"
+        android:inputType="textUri"
+        android:background="@drawable/rounded_edittext_background"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Description (Optional)"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialog_description_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g., Malicious Site"
+        android:inputType="textCapSentences"
+        android:background="@drawable/rounded_edittext_background"
+        android:padding="12dp" />
+
+</LinearLayout>

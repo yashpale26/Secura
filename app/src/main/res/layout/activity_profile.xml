@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:colorBackground"
+    tools:context=".settingsscreen.ProfileActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_standard"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:titleTextColor="?android:textColorPrimary"
+        app:subtitleTextColor="?android:textColorSecondary"
+        app:popupTheme="@style/Theme.Secura.PopupOverlay"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Profile Picture -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic_image_view"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_default_profile_pic"
+                app:civ_border_width="2dp"
+                app:civ_border_color="?attr/colorPrimary"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="@string/profile_picture_description" />
+
+            <!-- Profile Details -->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: MyName"
+                android:textSize="20sp"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username: MyUsername"
+                android:textSize="18sp"
+                android:textColor="?android:textColorSecondary"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/btn_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                style="@style/Widget.App.Button.Primary"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                style="@style/Widget.App.Button.Outlined"
+                android:textColor="@color/error_red"
+                app:strokeColor="@color/error_red"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

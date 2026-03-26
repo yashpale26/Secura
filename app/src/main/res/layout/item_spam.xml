@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="?attr/colorSurface">
+
+    <TextView
+        android:id="@+id/spamItemType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="?attr/colorError"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Call" />
+
+    <TextView
+        android:id="@+id/spamItemSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintStart_toEndOf="@id/spamItemType"
+        app:layout_constraintTop_toTopOf="@id/spamItemType"
+        app:layout_constraintBottom_toBottomOf="@id/spamItemType"
+        tools:text="Unknown (+919876543210)" />
+
+    <TextView
+        android:id="@+id/spamItemDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="?attr/android:textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/spamItemType"
+        app:layout_constraintBottom_toBottomOf="@id/spamItemType"
+        tools:text="Aug 12, 2025 14:30" />
+
+    <TextView
+        android:id="@+id/spamItemContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="?attr/android:textColorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spamItemType"
+        tools:text="You've won a prize! Click here to claim your reward. bit.ly/spamurl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

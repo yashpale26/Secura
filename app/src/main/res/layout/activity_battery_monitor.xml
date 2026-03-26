@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    tools:context=".modulesscreen.utilitiesandmanagement.batterymonitor.BatteryMonitorActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Secura.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Secura.PopupOverlay"
+            app:titleTextColor="@color/white"
+            app:subtitleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/permission_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/blue_standard"
+            app:trackTint="@color/blue_light"
+            android:text="Grant Required Permissions"
+            android:layout_marginBottom="16dp" />
+
+        <!-- OLD horizontal bar (hidden by commenting out) -->
+        <!--
+        <ProgressBar
+            android:id="@+id/battery_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:progressDrawable="@drawable/battery_progress"
+            android:background="@drawable/battery_frame"
+            android:layout_marginBottom="24dp" />
+        -->
+
+        <!-- NEW Circular Battery Ring -->
+        <FrameLayout
+            android:id="@+id/battery_ring_container"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center">
+
+            <ProgressBar
+                android:id="@+id/battery_progress_animated"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="100"
+                android:indeterminate="false"
+                android:progress="0"
+                android:progressDrawable="@drawable/battery_progress_circular"/>
+
+            <TextView
+                android:id="@+id/battery_percent_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0%"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="?android:textColorPrimary"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/battery_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Battery Info"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/power_saving_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn on Power Saver"
+            android:backgroundTint="?colorPrimary"
+            android:textColor="?colorOnPrimary" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

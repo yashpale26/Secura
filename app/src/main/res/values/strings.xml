@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Secura</string>
+    <string name="todo">TODO</string>
+    <string name="arrow_right_icon_description"></string>
+    <string name="database_icon_description"></string>
+    <string name="profile_icon_description"></string>
+    <string name="info_icon_description"></string>
+    <string name="profile_picture_description"></string>
+    <string name="edit_profile_picture_icon_description"></string>
+    <string name="modules">"- Malware Scanner: Detect and remove malicious threats.\n- Network Scanner: Identify vulnerabilities in your Wi-Fi network.\n- App Lock: Protect your apps with a secure lock.\n- Cyber Chatbot: Get instant security advice and support.\n- Battery Monitor: Optimize battery usage for extended life.\n- Z-Browser: Browse securely with enhanced privacy.\n- Intruder Selfie: Capture photos of unauthorized access attempts.\n- Gallery Vault: Securely hide your private photos and videos.\n- Call &amp; SMS Scanner: Filter spam and suspicious communications.\n- Security Monitor: Real-time protection against various threats.\n- App Management: Easily manage installed applications.\n- Secure Notepad: Keep your sensitive notes private.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="card_image_description">Image for the card</string>
+    <string name="des">"Unleash the full potential of Secura.\nEach card reveals a new layer of your personalized protection."</string>
+</resources>

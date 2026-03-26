@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Secura.ActionMode" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/blue_standard</item>
+        <item name="titleTextStyle">@style/Secura.ActionMode.Title</item>
+    </style>
+
+    <style name="Secura.ActionMode.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ToolbarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style for section headers in detail views -->
+    <style name="SectionHeader" parent="android:Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/app_details_header</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <!-- Style for regular detail text -->
+    <style name="DetailText" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <!-- Style for small descriptive text -->
+    <style name="SmallText" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Theme.ZSecurityAppV3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- NEW: Popup Overlay Theme -->
+    <style name="Theme.ZSecurityAppV3.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_alice_blue"
+    tools:context=".modulesscreen.utilitiesandmanagement.appmanagement.AppDataManagementActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Secura.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="?attr/colorOnPrimary"
+            app:subtitleTextColor="?attr/colorOnPrimary"
+            app:popupTheme="@style/Theme.Secura.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/dataMgmtAppIcon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="App Icon"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_launcher_foreground"/> <TextView
+        android:id="@+id/dataMgmtAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Name"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/text_primary_dark_blue"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/dataMgmtPackageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="com.example.app"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary_blue_grey"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/currentSizesTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Sizes: (Loading...)"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/clearCacheButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear Cache"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/dim_gray"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            android:padding="12dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clearing cache helps free up temporary space. This will take you to system settings to confirm."
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary_blue_grey"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/clearDataButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear Data"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/error_red"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            android:padding="12dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clearing data will delete all user data for this app (e.g., login, settings). This will take you to system settings to confirm."
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary_blue_grey"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>
