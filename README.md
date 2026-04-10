@@ -47,7 +47,7 @@ Secura is an all-in-one mobile security platform designed to protect Android use
 📥 Installation
   Clone the repository:
   Bash
-  git clone https://github.com/[Your-Username]/Secura.git
+  git clone https://github.com/yashpale26/Secura.git
 
 Open in Android Studio:
   Launch Android Studio and select "Open an Existing Project."
