@@ -60,6 +60,9 @@ Secura is an all-in-one mobile security platform designed to protect Android use
   - Connect a physical Android device or use the Android Emulator.
   - Click the Run button in Android Studio.
 
+📜 License
+- This project is licensed under the MIT License - see the LICENSE file for details.
+
 👤 Author
 - Yash Ganpat Pale
 
