@@ -66,3 +66,14 @@ Secura is an all-in-one mobile security platform designed to protect Android use
 👤 Author
 - Yash Ganpat Pale
 
+Screenshots: 
+
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/5b7f59c1-d82f-459d-8a81-6c1e91ab9f81" /><img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/999cc1d3-b3db-4906-913e-c740d37f6baa" />
+
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/b2cc9dde-f168-4f97-88f9-2c706b15237b" />
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/608e7398-92f7-461c-8e4b-a550fe3fa8c7" />
+
+
+
+
+
